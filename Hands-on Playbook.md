@@ -44,8 +44,10 @@ Considering the amount of time take to create OCI services using Terraform, some
             -  VCN: "handson-vcn"
             -  Subnet: "private subnet-handson-vcn"
       -  Rest leave all default 
-      - Add git repo under settings
-         "https://github.com/mscmukala/GenAI-RAG-OS-HandsOn.git"
+      - Udner Runtime configuration section
+         - Add Git settings
+               Click +Add get settings 
+                  Git repo url: "https://github.com/mscmukala/GenAI-RAG-OS-HandsOn.git"
    Step 3: Click "Create"
 
 Be patient Notebook creation take atleast 6-7 Mins
@@ -54,9 +56,14 @@ Be patient Notebook creation take atleast 6-7 Mins
 
 Follow these steps to run the hands-on portion of the lab:  
 
-1. Open the **Notebook session** and clone or link the **configured Git repository**.  
-2. Navigate to the provided **`.ipynb` file**.  
-3. Execute the notebook cells in sequence, following the instructions within.  
+1. In the notebook session, Under Luncher find 
+      Open 
+   
+      1.a 
+   Open the **Notebook session** 
+2. Find the git repo added during Notebook session    creation.
+3. Navigate to data-process-execution.ipynb file.  
+4. Execute the notebook cells in sequence, following the instructions within.  
 
 ### 6. GenAI Agent creation  
 
