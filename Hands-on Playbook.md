@@ -24,7 +24,7 @@ Considering the amount of time take to create OCI services using Terraform, some
 
 ### 3. Create Compartment 
       oci iam compartment list --name "handson-root" --all
-
+----
       oci iam compartment create \
 	--compartment-id <handson-root-ocid> \
 	--name <sub-compartment-name> \
