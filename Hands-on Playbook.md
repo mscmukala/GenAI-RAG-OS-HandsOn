@@ -23,7 +23,12 @@ Considering the amount of time take to create OCI services using Terraform, some
       - User login account with provided credentials.
 
 ### 3. Create Compartment 
-      Use the cli cmds provided config\cli-cmds.md
+      oci iam compartment list --name "handson-root" --all
+
+      oci iam compartment create \
+	--compartment-id <handson-root-ocid> \
+	--name <sub-compartment-name> \
+	--description "<description of sub-compartment>"
 
 ### 4. Create a Notebook Session  
    Login to OCI console, perform following 
