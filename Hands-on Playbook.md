@@ -36,6 +36,8 @@ Following services are pre-provisioned:
             -  VCN: "handson-vcn"
             -  Subnet: "private subnet-handson-vcn"
       -  Rest leave all default 
+      - Add git repo under settings
+         "https://github.com/mscmukala/GenAI-RAG-OS-HandsOn.git"
    Step 3: Click "Create"
 
 Be patient Notebook creation take atleast 6-7 Mins
@@ -74,16 +76,17 @@ Follow these steps to run the hands-on portion of the lab:
             -  Subnet: "private subnet-handson-vcn"
       -  Rest leave all default 
    Step 3: Click "Create"
-- Provisioned all necessary OCI infrastructure for GenAI and OpenSearch.  
-- Set up and executed a **Jupyter Notebook** to interact with the GenAI Agent.  
-- Performed **semantic search** using OpenSearch as a knowledge base.  
 
+### 4. Perform Conversational Chat 
+   Back to Agents listing screen
+      - Find the agent create above
+      - Click "Launch Chat"
+      - Enter the diag query 
+         ex: "Given a patient with sudden neurological symptoms after long-distance travel and evidence of leg swelling, what cardiac abnormality could explain these findings?"
 
-### 3. GenAI Agent creation  
+### 3. Summary  
 
 By completing this lab, you will have:  
-- Provisioned all necessary OCI infrastructure for GenAI and OpenSearch.  
+- Under the OCI AI services required to build solution around medical diag helper for medical professionals.
 - Set up and executed a **Jupyter Notebook** to interact with the GenAI Agent.  
 - Performed **semantic search** using OpenSearch as a knowledge base.  
-
----
