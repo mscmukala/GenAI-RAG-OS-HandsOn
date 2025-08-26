@@ -6,7 +6,7 @@
 ### 1. Infrastructure Setup  
 #### Pre-proivistion Infrastructure
 Considering the amount of time take to create OCI services using Terraform, some of the larger services and permissions will be pre provisioned before workshop
-Following services are pre-provisioned: 
+   Following services are pre-provisioned: 
    - OCI OpensearchDB, used store Vector Emeddedings to perform symantic search
       ref: https://docs.oracle.com/en/learn/oci-opensearch/index.html#introduction
    - OCI Network, For simplicity creating one VCN with public and Private along with required gateways
@@ -22,7 +22,10 @@ Following services are pre-provisioned:
       - User will get email once user provisioned and provided appropriate access
       - User login account with provided credentials.
 
-### 3: Create a Notebook Session  
+### 3. Create Compartment 
+      Use the cli cmds provided config\cli-cmds.md
+
+### 4. Create a Notebook Session  
    Login to OCI console, perform following 
    Step 1. "Under Analytics & AI"-->
                   Machine learning --> 
@@ -42,7 +45,7 @@ Following services are pre-provisioned:
 
 Be patient Notebook creation take atleast 6-7 Mins
 
-### 2. Lab Execution  
+### 5. Execution  
 
 Follow these steps to run the hands-on portion of the lab:  
 
@@ -50,7 +53,7 @@ Follow these steps to run the hands-on portion of the lab:
 2. Navigate to the provided **`.ipynb` file**.  
 3. Execute the notebook cells in sequence, following the instructions within.  
 
-### 3. GenAI Agent creation  
+### 6. GenAI Agent creation  
 
  Login to OCI console, perform following 
    Step 1. "Under Analytics & AI"-->
@@ -77,14 +80,14 @@ Follow these steps to run the hands-on portion of the lab:
       -  Rest leave all default 
    Step 3: Click "Create"
 
-### 4. Perform Conversational Chat 
+### 7. Perform Conversational Chat 
    Back to Agents listing screen
       - Find the agent create above
       - Click "Launch Chat"
       - Enter the diag query 
          ex: "Given a patient with sudden neurological symptoms after long-distance travel and evidence of leg swelling, what cardiac abnormality could explain these findings?"
 
-### 3. Summary  
+### Summary  
 
 By completing this lab, you will have:  
 - Under the OCI AI services required to build solution around medical diag helper for medical professionals.
