@@ -1,0 +1,50 @@
+#Note: 
+#data-scientists-grp - Group Name 
+#dg-handson -   Dynamic Group
+
+#Policies required for datascience notebook/model deployment/ genai services
+
+Define tenancy datascience-tenancy as ocid1.tenancy.oc1..aaaaaaaavfoi6rf7tj6oktbwlqgslem6vz7pll666xi4domj2qqtneu5emka
+Allow service datascience to use virtual-network-family in compartment handson-root
+Allow group data-scientists-grp to manage data-science-family in compartment handson-root
+Allow group data-scientists-grp to use virtual-network-family in compartment handson-root
+Allow group data-scientists-grp to read metrics in compartment handson-root
+Allow group data-scientists-grp to manage log-groups in compartment handson-root
+Allow group data-scientists-grp to manage objects in compartment handson-root
+Allow group data-scientists-grp to manage buckets in compartment handson-root
+Allow group data-scientists-grp to use log-content in compartment handson-root
+Allow group data-scientists-grp to use object-family in compartment handson-root
+Allow dynamic-group dg-handson to manage data-science-family in compartment handson-root
+Allow dynamic-group dg-handson to manage dataflow-family in compartment handson-root
+Allow dynamic-group dg-handson to read compartments in tenancy
+Allow dynamic-group dg-handson to read users in tenancy
+Allow dynamic-group dg-handson to use log-content in compartment handson-root
+Allow dynamic-group dg-handson to use log-groups in compartment handson-root
+Allow dynamic-group dg-handson to manage object-family in compartment handson-root
+Allow dynamic-group dg-handson to read virtual-network-family in compartment handson-root
+Allow dynamic-group dg-handson to use object-family in compartment handson-root
+Allow dynamic-group dg-handson to read repos in compartment handson-root
+Endorse any-user to read data-science-models in tenancy datascience-tenancy  where ALL {target.compartment.name='service-managed-models'}
+Endorse any-user to inspect data-science-models in tenancy datascience-tenancy  where ALL {target.compartment.name='service-managed-models'}
+Endorse any-user to read object in tenancy datascience-tenancy  where ALL {target.compartment.name='service-managed-models', target.bucket.name='service-managed-models'}
+Allow dynamic-group dg-handson to manage data-science-model-deployments in compartment handson-root
+Allow dynamic-group dg-handson to manage data-science-models in compartment handson-root
+Allow dynamic-group dg-handson to use logging-family in compartment handson-root
+Allow dynamic-group dg-handson to manage data-science-jobs in compartment handson-root
+Allow dynamic-group dg-handson to manage data-science-job-runs in compartment handson-root
+Allow dynamic-group dg-handson to use virtual-network-family in compartment handson-root
+Allow dynamic-group dg-handson to read resource-availability in compartment handson-root
+Allow dynamic-group dg-handson to manage data-science-projects in compartment handson-root
+Allow dynamic-group dg-handson to manage data-science-notebook-sessions in compartment handson-root
+Allow dynamic-group dg-handson to manage data-science-modelversionsets in compartment handson-root
+Allow dynamic-group dg-handson to read buckets in compartment handson-root
+Allow dynamic-group dg-handson to read objectstorage-namespaces in compartment handson-root
+Allow dynamic-group dg-handson to inspect compartments in tenancy
+Allow dynamic-group dg-handson to manage object-family in compartment handson-root where any {target.bucket.name='lk-ods-bucket'}
+Allow dynamic-group dg-handson to use logging-family in compartment handson-root
+Allow dynamic-group dg-handson to manage data-science-models in compartment handson-root
+Allow dynamic-group dg-handson to read data-science-jobs in compartment handson-root
+Allow dynamic-group dg-handson to manage objects in compartment handson-root where any {target.bucket.name='lk-ods-bucket'}
+Allow dynamic-group dg-handson to read buckets in compartment handson-root where any {target.bucket.name='lk-ods-bucket'}
+ALLOW ANY-USER to manage object-family in tenancy WHERE ALL {request.principal.type='opensearchcluster', request.resource.compartment.id='ocid1.compartment.oc1..aaaaaaaaddi5fpoqf7bfplxo3tvfbfrpxsz2ake644ma6fg4iq2yckaodkya'}
+ALLOW ANY-USER to manage generative-ai-family in tenancy WHERE ALL {request.principal.type='opensearchcluster', request.resource.compartment.id='ocid1.compartment.oc1..aaaaaaaaddi5fpoqf7bfplxo3tvfbfrpxsz2ake644ma6fg4iq2yckaodkya'}

@@ -1,0 +1,13 @@
+#Note: 
+#data-scientists-grp - group name 
+#handson-root - compartment where the Opensearch db created
+
+#Required Policies 
+
+Allow group data-scientists-grp to manage data-science-models in compartment handson-root
+Allow group data-scientists-grp to manage data-science-model-deployments in compartment handson-root
+Allow group data-scientists-grp to manage vnics in compartment handson-root
+Allow group data-scientists-grp to manage vcns in compartment handson-root
+Allow group data-scientists-grp to manage subnets in compartment handson-root
+Allow group data-scientists-grp to use network-security-groups in compartment handson-root
+Allow group data-scientists-grp to manage opensearch-family in compartment  handson-root

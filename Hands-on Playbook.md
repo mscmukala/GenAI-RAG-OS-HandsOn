@@ -1,0 +1,89 @@
+# Hands-on Lab Playbook  
+
+## Lab Title  
+**Developing a GenAI Agent using OCI RAG with OpenSearch as the Knowledge Base**  
+
+### 1. Infrastructure Setup  
+#### Pre-proivistion Infrastructure
+Considering the amount of time take to create OCI services using Terraform, some of the larger services and permissions will be pre provisioned before workshop
+Following services are pre-provisioned: 
+   - OCI OpensearchDB, used store Vector Emeddedings to perform symantic search
+      ref: https://docs.oracle.com/en/learn/oci-opensearch/index.html#introduction
+   - OCI Network, For simplicity creating one VCN with public and Private along with required gateways
+      ref: https://docs.oracle.com/en/solutions/wls-on-prem-to-oci/use-wizard-create-vcn.html
+   - OCI Policies, required access permission for services to access 
+     ref: /data/policies
+
+### 2. User provision and Access 
+   How the user will access the environment:  
+      - User works within the defined tenancy (Srinivas Tenancy will be used)
+      - User will be provided access, couple hours before the demo.
+      {Each of the participant to provide thier full name and email}
+      - User will get email once user provisioned and provided appropriate access
+      - User login account with provided credentials.
+
+### 3: Create a Notebook Session  
+   Login to OCI console, perform following 
+   Step 1. "Under Analytics & AI"-->
+                  Machine learning --> 
+                     Data Science 
+   Step 2. When creating the session, use following 
+      - Compartment - Choose newly created compartment
+      - Name: <name of your choice>
+      - Compute shape: <shape of your choice> or leave default
+      - Choose "Custom networking"
+            -  Compartment: "handson-root" 
+            -  VCN: "handson-vcn"
+            -  Subnet: "private subnet-handson-vcn"
+      -  Rest leave all default 
+   Step 3: Click "Create"
+
+Be patient Notebook creation take atleast 6-7 Mins
+
+### 2. Lab Execution  
+
+Follow these steps to run the hands-on portion of the lab:  
+
+1. Open the **Notebook session** and clone or link the **configured Git repository**.  
+2. Navigate to the provided **`.ipynb` file**.  
+3. Execute the notebook cells in sequence, following the instructions within.  
+
+### 3. GenAI Agent creation  
+
+ Login to OCI console, perform following 
+   Step 1. "Under Analytics & AI"-->
+               Click on "Generative AI Agents"
+   Step 2. on Left select "Overview"
+      Center of page notice, 
+         "Get Started: Create your first agent" --> Click "Create Agent"
+      Step1: Basic Information
+            - Name: <of your choice>
+            - Compartment - Choose newly created compartment
+            leave rest value defaults
+          Click "Next"
+      Step 2: Add Tool ( Tools )
+          Click Add tool 
+            - Make sure RAG is selected 
+            - under RAG configuration 
+                  Enter Name: <of your choice>
+                  Decription: "use knowledge to provide advanced medical reasoning. researches solutions to provided questions which are verifiable medical problems. Those responses are validated through a medical verifier."
+      - Compute shape: <shape of your choice> or leave default
+      - Choose "Custom networking"
+            -  Compartment: "handson-root" 
+            -  VCN: "handson-vcn"
+            -  Subnet: "private subnet-handson-vcn"
+      -  Rest leave all default 
+   Step 3: Click "Create"
+- Provisioned all necessary OCI infrastructure for GenAI and OpenSearch.  
+- Set up and executed a **Jupyter Notebook** to interact with the GenAI Agent.  
+- Performed **semantic search** using OpenSearch as a knowledge base.  
+
+
+### 3. GenAI Agent creation  
+
+By completing this lab, you will have:  
+- Provisioned all necessary OCI infrastructure for GenAI and OpenSearch.  
+- Set up and executed a **Jupyter Notebook** to interact with the GenAI Agent.  
+- Performed **semantic search** using OpenSearch as a knowledge base.  
+
+---
