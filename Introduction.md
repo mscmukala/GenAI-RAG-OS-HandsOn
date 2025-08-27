@@ -46,3 +46,21 @@ The GenAI Agent, powered by RAG and LangChain, can:
 ---
 
 This approach empowers healthcare organizations to deliver safer, smarter, and more transparent care, while also serving as a powerful educational tool for the next generation of clinicians.
+
+
+### Sample Prompts for Various Scenarios
+
+- **Diagnostic reasoning:**
+	> Given a patient with sudden neurological symptoms after long-distance travel and evidence of leg swelling, what cardiac abnormality could explain these findings?
+
+- **Injury localization:**
+	> A patient sustains a penetrating chest wound near the 8th rib in the midaxillary line. Which thoracic structure is most likely injured?
+
+- **Test interpretation:**
+	> In a woman with stress urinary incontinence confirmed by Q-tip test, what would cystometry most likely reveal regarding residual volume and detrusor contractions?
+
+- **Differential diagnosis with history:**
+	> A 45-year-old man with past alcohol use presents with sudden dysarthria, shuffling gait, and intention tremor. What is the most likely diagnosis?
+
+- **Pathological findings:**
+	> A 45-year-old man presents with parkinsonism symptoms, hallucinations, and memory issues. What histological brain finding would most likely be observed?
