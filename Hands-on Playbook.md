@@ -97,7 +97,7 @@ Add Tool:
   - Under **RAG configuration**:
     - **Name:** `<of your choice>`
     - **Description:**  
-      `Use knowledge to provide advanced medical reasoning. Researches solutions to provided questions which are verifiable medical problems. Those responses are validated through a medical verifier.`
+      `Use knowledgebase to provide advanced medical reasoning. Researches solutions to provided questions which are verifiable medical problems. Those responses are validated through a medical practitioner.`
 
 **Step 5:**  
 Set compute and networking:

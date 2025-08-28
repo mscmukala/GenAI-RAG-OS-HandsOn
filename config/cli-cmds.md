@@ -68,16 +68,13 @@ oci data-science notebook-session create \
 
 ### Create a GenAI Agent
 ```sh
-oci generative-ai agent create \
+oci generative-ai-agent agent create \
 	--compartment-id <compartment-ocid> \
 	--display-name <agent-name> \
 	--description "<agent-description>"
 # Example:
-# oci generative-ai agent create \
-#   --compartment-id ocid1.compartment.oc1..aaaaaaaaxxxxxxxx \
-#   --display-name "genai-medical-agent" \
-#   --description "GenAI agent for medical reasoning"
-```
+#oci generative-ai-agent agent create --compartment-id ocid1.#compartment.oc1..#aaaaaaaaqvpcdevgw7ewnolqqy7yfztryqeikyhw5bpqsyvm2radodbc7dia #--display-name "genai-medical-agent" --description "GenAI agent #for medical reasoning"
+
 
 ### Create a RAG Tool for the Agent (with OpenSearch as Knowledge Base)
 ```sh

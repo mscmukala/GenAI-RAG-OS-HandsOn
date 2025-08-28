@@ -1,0 +1,37 @@
+{
+  "compartmentId": "ocid1.compartment.oc1..aaaaaaaaqvpcdevgw7ewnolqqy7yfztryqeikyhw5bpqsyvm2radodbc7dia",
+  "description": "Medical knowledge base using OpenSearch cluster",
+  "displayName": "medical-opensearch-kb",
+  "freeformTags": {
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2"
+  },
+  "indexConfig": [
+    "This parameter should actually be a JSON object rather than an array - pick one of the following object variants to use",
+    {
+      "clusterId": "ocid1.opensearchcluster.oc1.iad.amaaaaaaedf3kyya4llgnrumbw6newbj5ihvy4cg64swrbiq3rgpufkuao4q",
+      "indexConfigType": "OCI_OPEN_SEARCH_INDEX_CONFIG",
+      "indexes": [
+        {
+          "name": "medical-index",
+          "schema": {
+            "bodyKey": "text",
+            "embeddingBodyKey": "vector_field"
+          }
+        }
+      ],
+      "secretDetail": [
+        "This parameter should actually be a JSON object rather than an array - pick one of the following object variants to use",
+        {
+          "type": "BASIC_AUTH_SECRET",
+          "vaultSecretId": "ocid1.vaultsecret.oc1.iad.amaaaaaaedf3kyyap2uge7dhgznpscezlgmfcddzhom5hremu5ht4ps27rpa"
+        }
+      ]
+    }
+  ],
+  "maxWaitSeconds": 0,
+  "waitForState": [
+    "ACCEPTED|IN_PROGRESS|WAITING|NEEDS_ATTENTION|FAILED|SUCCEEDED|CANCELING|CANCELED"
+  ],
+  "waitIntervalSeconds": 0
+}
