@@ -151,6 +151,7 @@ Add Tool:
 4. Enter your diagnostic query, for example:
 
    > Given a patient with sudden neurological symptoms after long-distance travel and evidence of leg swelling, what cardiac abnormality could explain these findings?
+5. For more sample prompts , please refer to section "Sample Prompts for Various Scenarios" in the Introduction.md
 ### Summary
 
 By completing this lab, you will have:
