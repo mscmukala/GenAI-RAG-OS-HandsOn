@@ -150,8 +150,10 @@ Add Tool:
 3. Click **Launch Chat**.
 4. Enter your diagnostic query, for example:
 
-   > Given a patient with sudden neurological symptoms after long-distance travel and evidence of leg swelling, what cardiac abnormality could explain these findings?
+   > A patient with pre-existing cardiac disease presents with complaints of sudden, involuntary jerks occurring during ambulation. What are the possible differential diagnoses? 
+
 5. For more sample prompts , please refer to section "Sample Prompts for Various Scenarios" in the Introduction.md
+
 ### Summary
 
 By completing this lab, you will have:
