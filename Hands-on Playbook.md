@@ -69,16 +69,20 @@ When creating the session, use the following settings:
 Click **Create**
 
 > **Note:** Notebook creation may take at least 6–7 minutes. Please be patient.
+**Step 4:** 
+Once Notebook session created, look for "Open" , this will open in seperate window you have to login to again. 
 
 ### 5. Execution
 
 Follow these steps to run the hands-on portion of the lab:
 
-1. In the notebook session, under **Launcher**, find and open **Jupyter**.
-2. Open the **Notebook session**.
-3. Find the Git repo added during notebook session creation.
-4. Navigate to the `data-process-execution.ipynb` file.
-5. Execute the notebook cells in sequence, following the instructions within.
+1. In the notebook session, on left menu, click on repos folder, keep navigating till you find folder "notebooks"
+2. Find data-processing-execution.ipynb and double click the file
+3. On the pop-up "Select Kernel" , in the dropdown choose Python[conda env:root]* , click "Select"
+4. Open the **Notebook session**.
+5. Find the Git repo added during notebook session creation.
+6. Navigate to the `data-process-execution.ipynb` file.
+7. Execute the notebook cells in sequence, following the instructions within.
 
 ### 6. GenAI Agent Creation
 
@@ -86,7 +90,7 @@ Login to the OCI console and perform the following steps:
 
 **Step 1:**  
 Navigate to:  
-`Analytics & AI` → `Generative AI Agents`
+`Analytics & AI` → under AI Services section click `Generative AI Agents`
 
 **Step 2:**  
 On the left, select **Overview**.  
@@ -107,18 +111,37 @@ Add Tool:
     - **Name:** `<of your choice>`
     - **Description:**  
       `Use knowledgebase to provide advanced medical reasoning. Researches solutions to provided questions which are verifiable medical problems. Those responses are validated through a medical practitioner.`
+  - Under **Add knowledge bases**:
+    - **Compartment:** Your newly created compartment should already be selected
+    - Click **Create Knowledge base**
+    - In the **New Knowledge base** window:
+      - **Name:** `<of your choice>`
+      - **Compartment:** Leave as is
+      - **Data source type:** Select `OCI OpenSearch` from dropdown
+      - **OpenSearch Cluster compartment:** Change to `handson-root`
+      - **OpenSearch Cluster:** Select `os-cluster-handson-pre` from dropdown
+      - Under **OpenSearch Index** section:
+        - **Index Name:** `<put the index name created in the notebook session>`
+        - **Body Key:** `text`
+      - Under **Secret Details** section:
+        - Select **Basic Auth Secret**
+        - **Basic Auth vault Secret compartment:** Change to `handson-root`
+        - Select `secret-os-creds` from dropdown
+    - Click **Create**
+- Back in the **Add Tool** window:
+  - Select the checkbox next to your newly created Knowledge base
+  - Click **Add tool**
 
 **Step 5:**  
-Set compute and networking:
-- **Compute shape:** `<shape of your choice>` (or leave as default)
-- **Custom networking:**
-  - **Compartment:** `handson-root`
-  - **VCN:** `handson-vcn`
-  - **Subnet:** `private subnet-handson-vcn`
-- Leave all other settings as default
+- Back in the create Agent window, click **Next**
+- In the **Setup agent endpoint** window:
+  - Leave all fields at their default values
+  - Click **Next**
 
 **Step 6:**  
-Click **Create**
+- Click **Create Agent**
+- In the popup, accept the license agreement and click "Submit"
+
 
 ### 7. Perform Conversational Chat
 
