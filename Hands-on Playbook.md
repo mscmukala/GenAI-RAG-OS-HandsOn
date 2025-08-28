@@ -12,7 +12,7 @@ The following services are pre-provisioned:
   [Reference](https://docs.oracle.com/en/learn/oci-opensearch/index.html#introduction)
 - **OCI Network:** For simplicity, creating one VCN with public and private subnets along with required gateways  
   [Reference](https://docs.oracle.com/en/solutions/wls-on-prem-to-oci/use-wizard-create-vcn.html)
-  **OCI Vault:** For simplicity, create vault  
+- **OCI Vault:** For simplicity, create vault  
   [Reference](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingvaults_topic-To_create_a_new_vault.htm)
 - **OCI Policies:** Required access permissions for services to access  
   Reference: `/data/policies`
@@ -161,3 +161,5 @@ By completing this lab, you will have:
 - **Understood** the OCI AI services required to build a solution around a medical diagnosis helper for medical professionals.
 - **Set up and executed** a Jupyter Notebook to interact with the GenAI Agent.
 - **Performed semantic search** using OpenSearch as a knowledge base.
+
+[def]: https://docs.oracle.com/en/solutions/wls-on-prem-to-oci/use-wizard-create-vcn.html
