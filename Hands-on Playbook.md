@@ -1,7 +1,6 @@
 # Hands-on Lab Playbook  
 
-## Lab Title  
-**Developing a GenAI Agent using OCI RAG with OpenSearch as the Knowledge Base**  
+## Lab Title: **Developing a GenAI Agent using OCI RAG with OpenSearch as the Knowledge Base**  
 
 ### 1. Infrastructure Setup  
 #### Pre-provision Infrastructure
@@ -13,6 +12,8 @@ The following services are pre-provisioned:
   [Reference](https://docs.oracle.com/en/learn/oci-opensearch/index.html#introduction)
 - **OCI Network:** For simplicity, creating one VCN with public and private subnets along with required gateways  
   [Reference](https://docs.oracle.com/en/solutions/wls-on-prem-to-oci/use-wizard-create-vcn.html)
+  **OCI Vault:** For simplicity, create vault  
+  [Reference](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingvaults_topic-To_create_a_new_vault.htm)
 - **OCI Policies:** Required access permissions for services to access  
   Reference: `/data/policies`
 ### 2. User Provision and Access
@@ -25,13 +26,21 @@ How users will access the environment:
 - Users will receive an email once provisioned and given appropriate access.
 - Users log in with the provided credentials.
 ### 3. Create Compartment 
-```sh
-oci iam compartment list --name "handson-root" --all
-```
-----
-```sh
-oci iam compartment create --compartment-id <handson-root-ocid> --name <sub-compartment-name> --description "<description of sub-compartment>"
-```
+
+Login to the OCI console and perform the following steps:
+
+**Step 1:**  
+Navigate to:  
+`Identity & Security` → Under 'Identity' → Click `Compartments`
+
+**Step 2:**  
+- Click on compartment titled: **handson-root**
+- Click **Create compartment**
+- Fill in the details:
+  - **Name:** `<name of your choice>`
+  - **Description:** `<enter description>`
+  - **Parent compartment:** Ensure **handson-root** is selected
+- Click **Create Compartment**
 
 ### 4. Create a Notebook Session
 
