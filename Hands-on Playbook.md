@@ -15,12 +15,12 @@ The following services are pre-provisioned:
 - **OCI Vault:** For simplicity, create vault  
   [Reference](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingvaults_topic-To_create_a_new_vault.htm)
 - **OCI Policies:** Required access permissions for services to access  
-  Reference: `/data/policies`
+  Reference: `/config/policies`
 ### 2. User Provision and Access
 
 How users will access the environment:
 
-- Users work within the defined tenancy (**Srinivas Tenancy** will be used).
+- Users work within the defined tenancy (**Workshop Tenancy** will be used).
 - Access will be provided a couple of hours before the demo.
 - **Each participant must provide their full name and email.**
 - Users will receive an email once provisioned and given appropriate access.
@@ -42,16 +42,25 @@ Navigate to:
   - **Parent compartment:** Ensure **handson-root** is selected
 - Click **Create Compartment**
 
-### 4. Create a Notebook Session
-
+### 4. Create a Notebook Project 
 Login to the OCI console and perform the following steps:
 
 **Step 1:**  
 Navigate to:  
 `Analytics & AI` → `Machine Learning` → `Data Science`
-
 **Step 2:**  
-When creating the session, use the following settings:
+Find and Click "Create Project" on the center screen
+  Use following settings:
+    - **Compartment:** '<Choose the newly created compartment>'
+    - **Name**:** `<name of your choice>`
+  Click Create button
+
+### 5. Create a Notebook Session
+**Step 1:**  
+On left top corner navigation, should see as follows: 
+'Data Science` >> `Projects` >> `Project Details`
+**Step 2:**  
+- Find and Click on **Create Notebook Session"
 - **Compartment:** Choose the newly created compartment
 - **Name:** `<name of your choice>`
 - **Compute shape:** `<shape of your choice>` (or leave as default)
@@ -64,25 +73,22 @@ When creating the session, use the following settings:
   - Add Git settings:
     - Click **+ Add Git settings**
     - **Git repo URL:** `https://github.com/mscmukala/GenAI-RAG-OS-HandsOn.git`
-
 **Step 3:**  
 Click **Create**
+  **Note:** Notebook creation may take at least 6–7 minutes. Please be patient.
 
-> **Note:** Notebook creation may take at least 6–7 minutes. Please be patient.
 **Step 4:** 
-Once Notebook session created, look for "Open" , this will open in seperate window you have to login to again. 
+Once Notebook session created, look for "Open" at the center left , this will open in seperate window where you have to login to tenancy again. 
+
+Once login you should see datascience notebook session.
 
 ### 5. Execution
-
 Follow these steps to run the hands-on portion of the lab:
 
 1. In the notebook session, on left menu, click on repos folder, keep navigating till you find folder "notebooks"
-2. Find data-processing-execution.ipynb and double click the file
+2. Find python nookbook file, data-processing-execution.ipynb and double click the file
 3. On the pop-up "Select Kernel" , in the dropdown choose Python[conda env:root]* , click "Select"
-4. Open the **Notebook session**.
-5. Find the Git repo added during notebook session creation.
-6. Navigate to the `data-process-execution.ipynb` file.
-7. Execute the notebook cells in sequence, following the instructions within.
+4. Instrcutor will help executing the notebook cells...
 
 ### 6. GenAI Agent Creation
 
@@ -127,8 +133,8 @@ Add Tool:
         - Select **Basic Auth Secret**
         - **Basic Auth vault Secret compartment:** Change to `handson-root`
         - Select `secret-os-creds` from dropdown
-    - Click **Create**
-- Back in the **Add Tool** window:
+    - Click **Create** 
+- Back in the **Add Tool** window: wait unitl Knowledge base "Lifecycle    status" shows 'Active'
   - Select the checkbox next to your newly created Knowledge base
   - Click **Add tool**
 
