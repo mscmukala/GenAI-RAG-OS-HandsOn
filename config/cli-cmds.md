@@ -93,7 +93,7 @@ oci generative-ai rag-tool create \
 # Example:
 # oci generative-ai rag-tool create \
 #   --compartment-id ocid1.compartment.oc1..aaaaaaaaxxxxxxxx \
-#   --agent-id ocid1.generativeaiagent.oc1..aaaaaaaayyyyyyyy \
+#   --agent-id "ocid1.genaiagent.oc1.iad.amaaaaaaedf3kyyamucgq3lxe34yizqf7e2egs67av2btal2txjbezwrndba \
 #   --display-name "medical-rag-tool" \
 #   --description "RAG tool for medical OpenSearch KB" \
 #   --knowledge-base-type OPENSEARCH \
