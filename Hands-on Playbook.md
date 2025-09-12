@@ -44,22 +44,20 @@ Navigate to:
 
 ### 4. Create a Notebook Project 
 Login to the OCI console and perform the following steps:
-
-**Step 1:**  
-Navigate to:  
-`Analytics & AI` → `Machine Learning` → `Data Science`
-**Step 2:**  
-Find and Click "Create Project" on the center screen
-  Use following settings:
-    - **Compartment:** '<Choose the newly created compartment>'
-    - **Name**:** `<name of your choice>`
-  Click Create button
+**Navigate to:**  
+  `Analytics & AI` → `Machine Learning` → `Data Science`
+  Find and Click "Create Project" on the center screen
+    - Use following settings:
+      - **Compartment:** '<Choose the newly created compartment>'
+      - **Name**:** `<name of your choice>`
+    - Click **Create** button
 
 ### 5. Create a Notebook Session
 **Step 1:**  
 On left top corner navigation, should see as follows: 
 'Data Science` >> `Projects` >> `Project Details`
-**Step 2:**  
+
+**Step 2:**
 - Find and Click on **Create Notebook Session"
 - **Compartment:** Choose the newly created compartment
 - **Name:** `<name of your choice>`
@@ -82,7 +80,7 @@ Once Notebook session created, look for "Open" at the center left , this will op
 
 Once login you should see datascience notebook session.
 
-### 5. Execution
+### 6. Execution
 Follow these steps to run the hands-on portion of the lab:
 
 1. In the notebook session, on left menu, click on repos folder, keep navigating till you find folder "notebooks"
@@ -90,7 +88,7 @@ Follow these steps to run the hands-on portion of the lab:
 3. On the pop-up "Select Kernel" , in the dropdown choose Python[conda env:root]* , click "Select"
 4. Instrcutor will help executing the notebook cells...
 
-### 6. GenAI Agent Creation
+### 7. GenAI Agent Creation
 
 Login to the OCI console and perform the following steps:
 
@@ -149,7 +147,7 @@ Add Tool:
 - In the popup, accept the license agreement and click "Submit"
 
 
-### 7. Perform Conversational Chat
+### 8. Perform Conversational Chat
 
 1. Go back to the **Agents** listing screen.
 2. Find the agent you created above.
